@@ -64,3 +64,9 @@ $ forge --help
 $ anvil --help
 $ cast --help
 ```
+
+1. proper readme
+2. integration tests
+    1. PIT STOP! How to make running these scripts easier?
+3. programatic verification
+4. push to github
