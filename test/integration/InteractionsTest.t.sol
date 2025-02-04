@@ -7,7 +7,7 @@ import {FundMe} from "../../src/FundMe.sol";
 import {DeployFundMe} from "../../script/DeployFundMe.s.sol";
 import {FundFundMe, WithdrawFundMe} from "../../script/Interactions.s.sol";
 
-contract InteractionTest is Test{
+contract InteractionTest is Test {
     FundMe fundMe;
 
     address USER = makeAddr("Vitalik");
@@ -18,8 +18,8 @@ contract InteractionTest is Test{
     function setUp() external {
         DeployFundMe deploy = new DeployFundMe();
         fundMe = deploy.run();
-        vm.deal(USER,STARTING_BALANCE);
-    } 
+        vm.deal(USER, STARTING_BALANCE);
+    }
 
     function testUserCanFundInteractions() public {
         FundFundMe fundFundMe = new FundFundMe();
