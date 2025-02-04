@@ -43,7 +43,6 @@ contract FundMe {
     }
 
     function cheaperWithdraw() public onlyOwner {
-        address[] memory funderz = s_funders;
 
         uint256 fundersLength = s_funders.length;
         for(
