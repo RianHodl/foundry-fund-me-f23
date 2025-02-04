@@ -46,10 +46,6 @@ contract FundMe {
     }
 
     function cheaperWithdraw() public onlyOwner {
-<<<<<<< HEAD
-
-=======
->>>>>>> 1bc9dc5 (Fix call operation syntax)
         uint256 fundersLength = s_funders.length;
         for (
             uint256 funderIndex = 0;
@@ -84,14 +80,9 @@ contract FundMe {
         // require(sendSuccess, "Send failed");
 
         // call
-<<<<<<< HEAD
-         (bool callSuccess,) = payable(msg.sender).call{value: address(this).balance}("");
-=======
-
         (bool callSuccess, ) = payable(msg.sender).call{
             value: address(this).balance
         }("");
->>>>>>> 1bc9dc5 (Fix call operation syntax)
         require(callSuccess, "Call failed");
     }
 
